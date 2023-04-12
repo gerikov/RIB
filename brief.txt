@@ -1,0 +1,8 @@
+Rest In Beef
+
+Egy modern letisztult bemutatkozó oldalt szeretnék a lakáséttermemnek. Telefonra is legyen optimalizált a weboldal.
+Általában heti egy alkalommal vagyunk nyitva, ezeknek az eseményeknek feltöltését szeretném magam végezni, legyen lehetőség külön jelezni, ha nincs már szabad hely.
+Az oldal legyen összekötve a facebook és instagram fiókunkkal, illetve a Google Maps is legyen látható.
+
+
+==================================================================================
