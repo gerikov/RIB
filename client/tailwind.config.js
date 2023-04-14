@@ -4,6 +4,7 @@ export default {
   theme: {
     fontFamily: {
       poppins: ['Poppins', 'sans-serif'],
+      patua: ['Patua One', 'serif'],
     },
     extend: {},
   },
