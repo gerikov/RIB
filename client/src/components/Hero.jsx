@@ -2,11 +2,11 @@
 
 const Hero = () => {
   return (
-    <section>
-      <div className='bg-[url("./images/wazaa.jpg")] bg-cover bg-top screen50vh z-0'>
-        <div className='bg-gradient-to-b from-black to-transparent screen50vh flex justify-center '>
-          <div className='flex items-center  h-full max-w-5xl w-full justify-start '>
-            <h2 className='text-6xl text-yellow-50 uppercase leading-normal  font-poppins'>
+    <section className=' '>
+      <div className='bg-[url("./images/wazaa.jpg")] bg-cover bg-top md:screen50vh h-screen'>
+        <div className='bg-gradient-to-b from-black to-transparent md:screen50vh h-screen flex justify-center '>
+          <div className='flex items-center  h-full max-w-5xl w-full justify-start px-4'>
+            <h2 className='md:text-6xl text-4xl text-yellow-50 uppercase leading-normal font-poppins '>
               Az igazi <br />
               <span className='font-bold '>Texas BBQ</span> <br />
               életérzés

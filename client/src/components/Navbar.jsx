@@ -1,9 +1,8 @@
 import './Navbar.scss';
-import heroImg from '../assets/wazaa.jpg';
 
 const Navbar = () => {
   return (
-    <nav className='fixed py-3 w-screen'>
+    <nav className='fixed py-3 w-screen text-sm container'>
       <div>
         <div className='flex justify-between max-w-5xl text-slate-100 mx-auto items-center'>
           <div>
@@ -11,9 +10,7 @@ const Navbar = () => {
           </div>
           <div>MENU</div>
           <div>
-            <button className='bg-red-800 py-2 px-4 font-semibold '>
-              FOGLALJ MOST
-            </button>
+            <button className='bg-red-800 py-2 px-5'>FOGLALJ MOST</button>
           </div>
         </div>
       </div>
