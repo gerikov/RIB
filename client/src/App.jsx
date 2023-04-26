@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import Introduction from './components/Introduction';
 import Smokers from './components/Smokers';
 import Testimonials from './components/Testimonials';
+import Parking from './components/Parking';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -15,6 +16,7 @@ function App() {
       <Introduction />
       {/* <Smokers /> */}
       <Testimonials />
+      <Parking />
     </>
   );
 }

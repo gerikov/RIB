@@ -37,7 +37,7 @@ const allTestimonial = [
 
 const Testimonials = () => {
   return (
-    <div className='container mx-auto p-4 mt-8'>
+    <div className='container mx-auto p-4 my-8'>
       <div className='uppercase mt-4 text-3xl font-semibold font-patua'>
         rólunk mondták
       </div>

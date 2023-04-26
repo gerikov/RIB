@@ -4,7 +4,7 @@ import test from '../assets/background.jpg';
 
 const Introduction = () => {
   return (
-    <section className=' bg-[#303030] flex justify-center flex-col mx-auto items-center '>
+    <section className=' bg-[#303030] flex justify-center flex-col items-center '>
       <div className='w-full flex flex-col justify-between px-4 container md:flex-row md:my-20 my-8'>
         <div className='md:basis-2/3 order-2 md:order-1 md:p-4'>
           <img src={introPic} alt='stake' className='w-full ' />
