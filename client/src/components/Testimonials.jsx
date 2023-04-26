@@ -37,7 +37,7 @@ const allTestimonial = [
 
 const Testimonials = () => {
   return (
-    <div className='container mx-auto p-4 my-8'>
+    <section className='container mx-auto p-4 my-8'>
       <div className='uppercase mt-4 text-3xl font-semibold font-patua'>
         rólunk mondták
       </div>
@@ -45,7 +45,7 @@ const Testimonials = () => {
         slidesPerView={'auto'}
         spaceBetween={10}
         // centeredSlides={true}
-        loop={true}
+
         breakpoints={{
           640: {
             slidesPerView: 'auto',
@@ -76,7 +76,7 @@ const Testimonials = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-    </div>
+    </section>
   );
 };
 export default Testimonials;
