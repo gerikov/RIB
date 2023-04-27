@@ -1,8 +1,9 @@
 import moment from 'moment';
 import { useState } from 'react';
 import { BsCalendarEvent } from 'react-icons/bs';
+import './Event.scss';
 
-const Event = ({ name, date, description, key }) => {
+const Event = ({ name, date, description, key, remaining, soldOut }) => {
   let formattedDate = moment(date);
   const month = formattedDate.format('MM');
   const day = formattedDate.format('DD');
@@ -18,7 +19,17 @@ const Event = ({ name, date, description, key }) => {
   }
 
   return (
-    <div className='bg-slate-200 rounded-xl md:p-8 p-5 md:w-[45%] w-full drop-shadow-l flex md:gap-5 gap-2 '>
+    <div className='relative bg-slate-200 rounded-xl md:p-8 p-5 md:w-[45%] w-full drop-shadow-l flex md:gap-5 gap-2 h-max min-h-[220px]'>
+      {remaining === 0 && (
+        <>
+          <div className='w-full h-full absolute z-10 bg-black top-0 left-0 rounded-xl flex justify-center items-center opacity-60'></div>
+          <div className='z-20 w-full h-full top-0 left-0 rounded-xl flex justify-center items-center absolute'>
+            <p className='text-4xl font-extrabold text-white notTrasparent uppercase tracking-widest -rotate-12'>
+              megtelt
+            </p>
+          </div>
+        </>
+      )}
       <div className=' font-patua md:text-3xl text-2xl font-semibold flex flex-col justify-center items-center  md:basis-1/3 basis-1/4 gap-4'>
         <span>
           <BsCalendarEvent size={46} />
@@ -42,8 +53,18 @@ const Event = ({ name, date, description, key }) => {
           </div>
         </div>
         {toggle[key] && <div>{description}</div>}
-        <div className='w-full flex justify-center'>
-          <button>Link az eseményhez</button>
+        {remaining !== 0 && (
+          <div className='w-full flex justify-center font-semibold'>
+            Szabad helyek száma: {remaining}
+          </div>
+        )}
+        <div className='w-full flex justify-center mt-2'>
+          <button
+            disabled={remaining === 0}
+            className='bg-red-800 px-6 py-2 text-white font-semibold rounded-lg disabled:bg-gray-400 disabled:'
+          >
+            Foglalás
+          </button>
         </div>
       </div>
     </div>

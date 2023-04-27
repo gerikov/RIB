@@ -21,9 +21,9 @@ const Events = () => {
     - texasi krumplipüré
     - chimichurri
     A menü ára: 7 900,- Ft`,
-      date: Date.now(),
+      date: '20220412',
       remaining: 10,
-      soldOut: false,
+      soldOut: true,
     },
     {
       name: 'Pastrami marhaszegy szednvics',
@@ -42,8 +42,8 @@ const Events = () => {
     - texasi krumplipüré
     - chimichurri
     A menü ára: 7 900,- Ft`,
-      date: Date.now(),
-      remaining: 10,
+      date: '20220521',
+      remaining: 0,
       soldOut: false,
     },
     {
@@ -63,8 +63,8 @@ const Events = () => {
     - texasi krumplipüré
     - chimichurri
     A menü ára: 7 900,- Ft`,
-      date: Date.now(),
-      remaining: 10,
+      date: '20230511',
+      remaining: 8,
       soldOut: false,
     },
     {
@@ -85,14 +85,14 @@ const Events = () => {
     - chimichurri
     A menü ára: 7 900,- Ft`,
       date: Date.now(),
-      remaining: 10,
-      soldOut: false,
+      remaining: 0,
+      soldOut: true,
     },
   ];
 
   return (
     <section>
-      <div className='container mx-auto p-4'>
+      <div className='container mx-auto p-4 mb-8'>
         <div className='uppercase mt-4 text-3xl font-semibold font-patua mb-8'>
           események
         </div>
