@@ -3,7 +3,15 @@ import { useState } from 'react';
 import { BsCalendarEvent } from 'react-icons/bs';
 import './Event.scss';
 
-const Event = ({ name, date, description, key, remaining, soldOut }) => {
+const Event = ({
+  name,
+  date,
+  description,
+  myKey,
+  remaining,
+  soldOut,
+  setIsOpenForm,
+}) => {
   let formattedDate = moment(date);
   const month = formattedDate.format('MM');
   const day = formattedDate.format('DD');
@@ -45,14 +53,14 @@ const Event = ({ name, date, description, key, remaining, soldOut }) => {
           </div>
           <div>
             <button
-              onClick={() => toggleFunction(key)}
+              onClick={() => toggleFunction(myKey)}
               className='text-red-800 font-semibold  duration-300 w-fit  py-2'
             >
               Részletek
             </button>
           </div>
         </div>
-        {toggle[key] && <div>{description}</div>}
+        {toggle[myKey] && <div>{description}</div>}
         {remaining !== 0 && (
           <div className='w-full flex justify-center font-semibold'>
             Szabad helyek száma: {remaining}
@@ -62,6 +70,7 @@ const Event = ({ name, date, description, key, remaining, soldOut }) => {
           <button
             disabled={remaining === 0}
             className='bg-red-800 px-6 py-2 text-white font-semibold rounded-lg disabled:bg-gray-400 disabled:'
+            onClick={() => setIsOpenForm((prev) => !prev)}
           >
             Foglalás
           </button>

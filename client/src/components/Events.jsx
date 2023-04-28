@@ -1,6 +1,7 @@
 import moment from 'moment';
 import { useState } from 'react';
 import Event from './Event';
+import OrderForm from './OrderForm';
 
 const Events = () => {
   const events = [
@@ -90,15 +91,23 @@ const Events = () => {
     },
   ];
 
+  const [isOpenForm, setIsOpenForm] = useState(false);
+
   return (
-    <section>
+    <section className='relative'>
+      {isOpenForm && <OrderForm setIsOpenForm={setIsOpenForm} />}
       <div className='container mx-auto p-4 mb-8'>
         <div className='uppercase mt-4 text-3xl font-semibold font-patua mb-8'>
           események
         </div>
         <div className='flex flex-wrap justify-center gap-5'>
           {events.map((event, index) => (
-            <Event key={index} {...event} />
+            <Event
+              key={index}
+              myKey={index}
+              {...event}
+              setIsOpenForm={setIsOpenForm}
+            />
           ))}
         </div>
       </div>

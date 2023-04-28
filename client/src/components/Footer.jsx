@@ -3,7 +3,7 @@ import logo from '../assets/RIB-logo-circle-white.png';
 const Footer = () => {
   return (
     <section className='bg-black text-white'>
-      <div class='container mx-auto p-4 flex justify-between py-8'>
+      <div className='container mx-auto p-4 flex justify-between py-8'>
         <div className='md:basis-1/3 flex  flex-col'>
           <h3 className='font-bold text-xl pb-4'>Social</h3>
           <a href='https://www.facebook.com/restinbeefbbq'>Facebook</a>

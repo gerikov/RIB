@@ -67,7 +67,7 @@ const Testimonials = () => {
         className='mySwiper'
       >
         {allTestimonial.map((testimonial, index) => (
-          <SwiperSlide className='my-8'>
+          <SwiperSlide className='my-8' key={index}>
             <Testimonial
               key={index}
               description={testimonial.description}

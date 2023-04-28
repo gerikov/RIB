@@ -7,12 +7,12 @@ import Testimonials from './components/Testimonials';
 import Parking from './components/Parking';
 import Footer from './components/Footer';
 import Events from './components/Events';
+import { store } from './store';
+import { Provider } from 'react-redux';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
+    <Provider store={store}>
       <Navbar />
       <Hero />
       <Introduction />
@@ -21,7 +21,7 @@ function App() {
       <Events />
       <Parking />
       <Footer />
-    </>
+    </Provider>
   );
 }
 
