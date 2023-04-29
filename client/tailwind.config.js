@@ -6,7 +6,11 @@ export default {
       poppins: ['Poppins', 'sans-serif'],
       patua: ['Patua One', 'serif'],
     },
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'hero-cover': "url('/images/wazaa.jpg')",
+      },
+    },
   },
   plugins: [],
 };
